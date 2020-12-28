@@ -3,10 +3,8 @@ package lab.vcs.hoangnd;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.Base64;
 
 import javax.servlet.RequestDispatcher;
@@ -64,18 +62,23 @@ public class IndexController extends HttpServlet {
 		else if(action.equals("deserialized")) {
 			byte[] decodeBase64 = Base64.getDecoder().decode(request.getParameter("strBase64"));
 			
-			ByteArrayInputStream in = new ByteArrayInputStream(decodeBase64);
-			ObjectInputStream is = new ObjectInputStream(in);
+			 ByteArrayInputStream in = new ByteArrayInputStream(decodeBase64);
+			 ObjectInputStream is = new ObjectInputStream(in);
 			try {
 				User user = (User)is.readObject();
-				// System.out.println(user.getUsername());
-				
 				request.setAttribute("deserializedObj", user);
 				
-				request.setAttribute("username", user.getUsername());
-				request.setAttribute("email", user.getEmail());
-				request.setAttribute("birth", user.getBirth());
-				request.setAttribute("phone", user.getPhone());
+//				User user = new User();
+//				FileInputStream file = new FileInputStream("E:\\ViettelCyberSecurity\\challenge11\\test.ser");
+//	            ObjectInputStream in = new ObjectInputStream(file);
+//
+//	            // Deserialization of the object to file
+//
+//	            // System.out.println("Deserializing from " + filename);
+//	            user = (User)in.readObject();
+//
+//	            in.close();
+//	            file.close();
 				
 				RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 				rd.forward(request, response);

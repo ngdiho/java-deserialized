@@ -3,10 +3,20 @@ package lab.vcs.hoangnd;
 import java.io.Serializable;
 
 public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String username;
 	private String email;
 	private int birth;
 	private String phone;
+	private String command;
+
+	public String getCommand() {
+		return command;
+	}
+
+	public void setCommand(String command) {
+		this.command = command;
+	}
 
 	public String getUsername() {
 		return username;

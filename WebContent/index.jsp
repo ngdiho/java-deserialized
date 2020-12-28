@@ -57,8 +57,9 @@ textarea {
 	<h1>Serialized form</h1>
 	<form action="IndexController" method="post">
 		<input type="text" name="action" value="deserialized" hidden>
-		<label>Base64 string</label> <input type="text" name="strBase64"><br>
-		<br>
+		<label>Base64 string</label>
+		<textarea type="text" name="strBase64"></textarea>
+		<br> <br>
 		<button type="submit">Deserialized</button>
 	</form>
 	<br>
@@ -82,7 +83,7 @@ textarea {
 			</tr>
 		</table>
 
-		
+
 	</c:if>
 
 </body>

@@ -3,6 +3,7 @@
 	<name>lab</name>
 	<comment></comment>
 	<projects>
+		<project>commons-collections-3.2.1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
