@@ -54,8 +54,8 @@ textarea {
 		<textarea><c:out value="${serializedObj}" /></textarea>
 	</c:if>
 	<hr>
-	<h1>Serialized form</h1>
-	<form action="IndexController" method="post">
+	<h1>Deserialized form</h1>
+	<form action="IndexController_fixed" method="post">
 		<input type="text" name="action" value="deserialized" hidden>
 		<label>Base64 string</label>
 		<textarea type="text" name="strBase64"></textarea>

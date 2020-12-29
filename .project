@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>commons-collections-3.2.1</project>
+		<project>commons-io-2.5</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
